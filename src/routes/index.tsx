@@ -4,6 +4,7 @@ import { ArrowRight, BadgeCheck, BriefcaseBusiness, Check, ChevronDown, CircleGa
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/labs-team-collaboration.jpg";
+import bincomLogo from "@/assets/bincom-dev-center-logo.png.asset.json";
 
 const REGISTER_URL = "https://bit.ly/labsbybincom";
 
@@ -60,7 +61,7 @@ function Header() {
     <div className="section-shell flex h-20 items-center justify-between gap-5">
       <a href="#overview" className="font-display text-xl font-bold">LABS <span className="font-normal text-muted-foreground">by Bincom</span></a>
       <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:flex">{nav.map(([label, id]) => <a key={id} href={`#${id}`} className="text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground">{label}</a>)}</nav>
-      <div className="ml-auto hidden items-center gap-4 sm:flex"><div aria-label="Bincom Dev Center logo placeholder" className="border-l border-border pl-4 text-right leading-none"><span className="block text-[10px] font-bold uppercase text-muted-foreground">Bincom</span><span className="text-xs font-bold">Dev Center</span></div><ApplyButton label="Register Now" /></div>
+      <div className="ml-auto hidden items-center gap-4 sm:flex"><img src={bincomLogo.url} alt="Bincom Dev Center" width={768} height={768} className="h-14 w-20 border-l border-border object-contain pl-4"/><ApplyButton label="Register Now" /></div>
       <Button variant="ghost" size="icon" className="xl:hidden" aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
     {open && <nav className="section-shell grid border-t border-border py-4 xl:hidden">{nav.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)} className="border-b border-border py-3 text-sm font-semibold">{label}</a>)}<a className="mt-4 flex h-12 items-center justify-center rounded-md bg-primary font-bold text-primary-foreground" href={REGISTER_URL} target="_blank" rel="noreferrer">Register Now</a></nav>}
