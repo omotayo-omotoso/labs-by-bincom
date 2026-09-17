@@ -96,8 +96,9 @@ function Index() {
     </div></section>
 
     <section id="watch" className="border-y border-border bg-surface py-20 md:py-24"><div className="section-shell">
-      <p className="text-xs font-bold uppercase text-primary">02 / Watch</p>
-      <h2 className="mt-4 max-w-2xl text-4xl font-bold md:text-5xl">SEE LABS IN ACTION.</h2>
+      <p className="text-xs font-bold uppercase text-primary">Introduction</p>
+      <h2 className="mt-4 max-w-2xl text-4xl font-bold md:text-5xl">DISCOVER LABS BY BINCOM.</h2>
+      <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Watch the video to understand what Labs by Bincom is all about, how it works, and the opportunities it creates for aspiring and growing tech professionals.</p>
       <div className="mt-9 overflow-hidden border border-foreground shadow-labs">
         <iframe
           className="aspect-video w-full"
