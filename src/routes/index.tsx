@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Code2, ExternalLink, Users } from "lucide-react";
+import { ArrowRight, Check, Code2, Users } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/labs-team-collaboration.jpg";
 import bincomLogo from "@/assets/bincom-dev-center-logo.png.asset.json";
-
-const REGISTER_URL = "https://bit.ly/labsbybincom";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -48,10 +46,10 @@ function Header() {
 
 function RegistrationForm() {
   const [submitted, setSubmitted] = useState(false);
+  // TODO: submissions will be handed off to the Mautic integration by the dev team.
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitted(true);
-    window.open(REGISTER_URL, "_blank", "noopener,noreferrer");
   }
   return <form onSubmit={onSubmit} className="grid gap-4 border border-foreground bg-background p-6 shadow-labs md:p-8">
     <div><p className="text-xs font-bold uppercase text-primary">Registration</p><h2 className="mt-2 text-2xl font-bold md:text-3xl">Start Your Application</h2></div>
@@ -65,7 +63,7 @@ function RegistrationForm() {
       <label className="grid gap-2 text-xs font-bold uppercase sm:col-span-2">How did you hear about LABS by Bincom?<select name="source" defaultValue="" className={`${fieldClass} font-normal normal-case`}><option value="" disabled>Select an option</option>{sources.map(x => <option key={x}>{x}</option>)}</select></label>
     </div>
     <Button type="submit" variant="labs" size="lg" className="w-full">Complete Registration →</Button>
-    {submitted && <p className="text-sm text-muted-foreground">Thanks! The registration form has opened in a new tab — finish your application there.</p>}
+    {submitted && <p className="text-sm font-semibold text-primary">Thanks! Your application has been received — our team will be in touch shortly.</p>}
   </form>;
 }
 
@@ -76,9 +74,8 @@ function Index() {
         <div className="mb-7 inline-flex items-center gap-2 border border-foreground bg-background px-3 py-2 text-xs font-bold uppercase"><span className="size-2 bg-primary"/>Applications open</div>
         <h1 className="max-w-3xl text-balance text-5xl font-bold leading-[.94] md:text-7xl">BUILD REAL PRODUCTS.<br/><span className="text-primary">GAIN REAL EXPERIENCE.</span></h1>
         <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">LABS by Bincom is a 3–6 months pre-incubator program that brings together cross-functional teams to build digital technology products used by real-life users.</p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8">
           <Button asChild variant="labs" size="lg"><a href="#register">Apply to LABS<ArrowRight /></a></Button>
-          <Button asChild variant="labsDark" size="lg"><a href={REGISTER_URL} target="_blank" rel="noreferrer">Open registration link<ExternalLink /></a></Button>
         </div>
         <div className="mt-10 flex flex-wrap gap-2">{["3–6 Month Program", "Public Domain / Open Source", "Y Combinator Curriculum Integrated"].map(x => <span key={x} className="border border-border bg-background px-3 py-2 text-xs font-semibold">{x}</span>)}</div>
       </div>
