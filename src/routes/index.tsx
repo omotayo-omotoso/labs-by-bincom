@@ -85,6 +85,7 @@ function Index() {
     <section id="benefits" className="py-20 md:py-24"><div className="section-shell grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
       <div>
         <p className="text-xs font-bold uppercase text-primary">Program benefits</p>
+        <h2 className="mt-4 text-4xl font-bold md:text-5xl">WHAT'S IN IT FOR YOU?</h2>
         <ul className="mt-8 space-y-4">{benefits.map(x => <li key={x} className="flex items-start gap-3 border-b border-border pb-4 text-base font-semibold"><span className="mt-0.5 flex size-6 shrink-0 items-center justify-center bg-primary"><Check className="size-4"/></span>{x}</li>)}</ul>
       </div>
       <div className="grid grid-cols-3 gap-2">
