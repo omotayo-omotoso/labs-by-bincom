@@ -95,15 +95,31 @@ function Index() {
       </div>
     </div></section>
 
+    <section id="watch" className="border-y border-border bg-surface py-20 md:py-24"><div className="section-shell">
+      <p className="text-xs font-bold uppercase text-primary">02 / Watch</p>
+      <h2 className="mt-4 max-w-2xl text-4xl font-bold md:text-5xl">SEE LABS IN ACTION.</h2>
+      <div className="mt-9 overflow-hidden border border-foreground shadow-labs">
+        <iframe
+          className="aspect-video w-full"
+          src="https://www.youtube.com/embed/YjvBZA4p7dE"
+          title="LABS by Bincom — Watch the program overview"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    </div></section>
+
     <section id="skills" className="bg-foreground py-20 text-background md:py-24"><div className="section-shell">
-      <p className="text-xs font-bold uppercase text-primary">02 / Skills involved & tracks</p>
+      <p className="text-xs font-bold uppercase text-primary">03 / Skills involved & tracks</p>
       <h2 className="mt-4 max-w-2xl text-4xl font-bold md:text-5xl">FIND YOUR PLACE IN THE TEAM.</h2>
       <div className="mt-9 flex flex-wrap gap-3">{skills.map(x => <span key={x} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground">{x}</span>)}</div>
     </div></section>
 
     <section className="bg-primary"><div className="section-shell grid items-end gap-10 py-16 md:grid-cols-[1fr_auto] md:py-20">
       <div><p className="text-xs font-bold uppercase">Your next chapter starts here</p><h2 className="mt-4 max-w-4xl text-balance text-4xl font-bold leading-tight md:text-6xl">READY TO TURN YOUR IDEA INTO A REAL-WORLD PRODUCT?</h2></div>
-      <Button asChild variant="labsDark" size="lg"><a href={REGISTER_URL} target="_blank" rel="noreferrer">Register for LABS by Bincom now<ArrowRight /></a></Button>
+      <Button asChild variant="labsDark" size="lg"><a href="#register">Register for LABS by Bincom now<ArrowRight /></a></Button>
     </div></section>
   </main>
   <footer className="bg-foreground text-background"><div className="section-shell flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
