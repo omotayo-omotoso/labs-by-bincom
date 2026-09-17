@@ -113,7 +113,7 @@ function Index() {
     </div></section>
 
     <section id="skills" className="bg-foreground py-20 text-background md:py-24"><div className="section-shell">
-      <p className="text-xs font-bold uppercase text-primary">03 / Skills involved & tracks</p>
+      <p className="text-xs font-bold uppercase text-primary">Skills involved &amp; tracks</p>
       <h2 className="mt-4 max-w-2xl text-4xl font-bold md:text-5xl">FIND YOUR PLACE IN THE TEAM.</h2>
       <div className="mt-9 flex flex-wrap gap-3">{skills.map(x => <span key={x} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground">{x}</span>)}</div>
     </div></section>
